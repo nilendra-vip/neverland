@@ -14,6 +14,7 @@
   padding: 0;
   box-sizing: border-box;
   cursor:none;
+  scroll-behavior: smooth;
 }
 
 html,body {
@@ -101,7 +102,9 @@ body>#box p{
   font-weight: bold;
   
 }
-
+#overlay1{
+  display: none;
+}
 #overlay{
   width: 100%;
   height: 100vh;
@@ -287,6 +290,8 @@ body>#box p{
   width: 75%;
 }
 
+
+/* Page 2 */
 #main #page2{
   width: 100%;
   height: 250vh;
@@ -377,7 +382,7 @@ body>#box p{
 
 
 
-
+/* Page 4 */
 #main #page4{
   width:100%;
   height: 40vh;
@@ -396,7 +401,7 @@ body>#box p{
 
 
 
-
+/* Page 5 */
 #main #page5{
   width:100%;
   height: 100vh;
@@ -407,7 +412,7 @@ body>#box p{
 }
 
 
-
+/* Page 6 */
 #main #page6{
   width:100%;
   height: 100vh;
@@ -483,7 +488,7 @@ body>#box p{
   display: flex;
 }
 
-#main #page7 #left{
+#main #page7 #top #left{
   width: 50%;
   height: 80vh;
   background-color:#FFFAF0;
@@ -516,12 +521,12 @@ body>#box p{
 }
 
 
-#main #page7 #right{
+#main #page7 #top #right{
   width: 50%;
   height: 80vh;
   background-color:white;
 }
-#main #page7 #right #box{
+#main #page7 #top #right #box{
   /* background-color: springgreen; */
   padding-left: 50px;
   display: flex;
@@ -610,7 +615,7 @@ body>#box p{
 #main #page7 #footer #right{
   width: 50%;
   height: inherit;
-  /* background-color: springgreen; */
+  background-color:white;
   display: flex;
   align-items: center;
 }

@@ -276,7 +276,7 @@ initialize();
 // Overlay
 function overlay() {
     var clutter;
-    document.querySelectorAll(".split").forEach(function(splittext){
+    document.querySelectorAll("#overlay .split").forEach(function(splittext){
         clutter = "";
         splittext.textContent.split("").forEach(function(char){
             clutter += `<span>${char}</span>`;
@@ -303,6 +303,37 @@ function overlay() {
     })
 }
 overlay();
+
+// for phone
+function overlay1() {
+    var clutter;
+    document.querySelectorAll("#overlay1 .split").forEach(function(splittext){
+        clutter = "";
+        splittext.textContent.split("").forEach(function(char){
+            clutter += `<span>${char}</span>`;
+        })
+        splittext.innerHTML = clutter;
+})
+
+    gsap.to("#overlay1 #text span", {
+        scrollTrigger: {
+            trigger: "#overlay1 h1",
+            start: "bottom 25%",
+            scrub: 0.5,
+            // markers: true
+        },
+        opacity: 0,
+        stagger: 0.2,
+        ease: Power3.easeInOUt
+    })
+    ScrollTrigger.create({
+        trigger: "#overlay1",
+        start: "bottom 100%",
+        pin: true,
+        // markers:true
+    })
+}
+overlay1();
 
 
 //------------------------------------------------------------------------------------
