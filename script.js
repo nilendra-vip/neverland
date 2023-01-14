@@ -6,7 +6,7 @@ window.addEventListener("mousemove", function(dets){
 
 
 function initialize() {
-    const canvas = document.querySelector("canvas");
+    const canvas = document.querySelector("#home canvas");
     const context = canvas.getContext("2d");
 
     canvas.width = window.innerWidth;
@@ -507,3 +507,176 @@ function page5(){
 page5();
 
 
+
+
+function page5PhotoFrame() {
+    const canvas = document.querySelector("#page5 canvas");
+    const context = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", function () {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        render();
+    })
+
+    function files(index) {
+        var data = `https://neverland.agency/assets/0001.79b3f4bd.webp
+        https://neverland.agency/assets/0002.c8a269b8.webp
+        https://neverland.agency/assets/0003.6a5589b0.webp
+        https://neverland.agency/assets/0004.a6707b12.webp
+        https://neverland.agency/assets/0005.a6a57710.webp
+        https://neverland.agency/assets/0006.c931e419.webp
+        https://neverland.agency/assets/0007.5eb18740.webp
+        https://neverland.agency/assets/0008.01b6202e.webp
+        https://neverland.agency/assets/0009.96fbce3c.webp
+        https://neverland.agency/assets/0010.1fe68672.webp
+        https://neverland.agency/assets/0011.5154b5c6.webp
+        https://neverland.agency/assets/0012.26fc3b2d.webp
+        https://neverland.agency/assets/0013.e2b7d4c5.webp
+        https://neverland.agency/assets/0014.8f1e0d07.webp
+        https://neverland.agency/assets/0015.e3229a8f.webp
+        https://neverland.agency/assets/0016.e6abe5d5.webp
+        https://neverland.agency/assets/0017.1d35af76.webp
+        https://neverland.agency/assets/0018.1ac6708b.webp
+        https://neverland.agency/assets/0019.b627e3a9.webp
+        https://neverland.agency/assets/0020.e5d18983.webp
+        https://neverland.agency/assets/0021.a2bc192b.webp
+        https://neverland.agency/assets/0022.d7f2c10d.webp
+        https://neverland.agency/assets/0023.ac95d331.webp
+        https://neverland.agency/assets/0024.fdb7ccb2.webp
+        https://neverland.agency/assets/0025.f999bc5d.webp
+        https://neverland.agency/assets/0026.e50f82db.webp
+        https://neverland.agency/assets/0027.776b1c9f.webp
+        https://neverland.agency/assets/0028.61ef7fa7.webp
+        https://neverland.agency/assets/0029.8cc38e0a.webp
+        https://neverland.agency/assets/0030.5a52e756.webp
+        https://neverland.agency/assets/0031.44132d6b.webp
+        https://neverland.agency/assets/0032.f3edbece.webp
+        https://neverland.agency/assets/0033.771589fd.webp
+        https://neverland.agency/assets/0034.6aa638e5.webp
+        https://neverland.agency/assets/0035.30183aeb.webp
+        https://neverland.agency/assets/0036.6663aca2.webp
+        https://neverland.agency/assets/0037.4a222751.webp
+        https://neverland.agency/assets/0038.0024aa05.webp
+        https://neverland.agency/assets/0039.a3026556.webp
+        https://neverland.agency/assets/0040.8d2dd547.webp
+        https://neverland.agency/assets/0041.d14a25e4.webp
+        https://neverland.agency/assets/0042.14dc7353.webp
+        https://neverland.agency/assets/0043.44351f30.webp
+        https://neverland.agency/assets/0044.455871e1.webp
+        https://neverland.agency/assets/0045.c9eda857.webp
+        https://neverland.agency/assets/0046.917eb755.webp
+        https://neverland.agency/assets/0047.6c5d5dae.webp
+        https://neverland.agency/assets/0048.b5ceecd4.webp
+        https://neverland.agency/assets/0049.9d119b5a.webp
+        https://neverland.agency/assets/0050.7f011c3c.webp
+        https://neverland.agency/assets/0051.d4f21794.webp
+        https://neverland.agency/assets/0052.19b9b4ec.webp
+        https://neverland.agency/assets/0053.e582e891.webp
+        https://neverland.agency/assets/0054.8c15855f.webp
+        https://neverland.agency/assets/0055.77d816c9.webp
+        https://neverland.agency/assets/0056.f7829d8d.webp
+        https://neverland.agency/assets/0057.11aa75b0.webp
+        https://neverland.agency/assets/0058.e4089d82.webp
+        https://neverland.agency/assets/0059.03eaa7f8.webp
+        https://neverland.agency/assets/0060.3898db51.webp
+        https://neverland.agency/assets/0061.162f1501.webp
+        https://neverland.agency/assets/0062.060ae4ca.webp
+        https://neverland.agency/assets/0063.e310a7ff.webp
+        https://neverland.agency/assets/0064.bad2cc1f.webp
+        https://neverland.agency/assets/0065.a56aa3ce.webp
+        https://neverland.agency/assets/0066.52d64310.webp
+        https://neverland.agency/assets/0067.cb9b8106.webp
+        https://neverland.agency/assets/0068.d9c4004f.webp
+        https://neverland.agency/assets/0069.8647df65.webp
+        https://neverland.agency/assets/0070.8c704ed7.webp
+        https://neverland.agency/assets/0071.4a5e0b80.webp
+        https://neverland.agency/assets/0072.b51d7e58.webp
+        https://neverland.agency/assets/0073.abe6f10f.webp
+        https://neverland.agency/assets/0074.7cba1065.webp
+        https://neverland.agency/assets/0075.06da08e5.webp
+        https://neverland.agency/assets/0076.28935a69.webp
+        https://neverland.agency/assets/0077.5581cd5a.webp
+        https://neverland.agency/assets/0078.28bc548e.webp
+        https://neverland.agency/assets/0079.faf9cf25.webp
+        https://neverland.agency/assets/0080.58ff647c.webp
+        https://neverland.agency/assets/0081.a3a587b1.webp
+        https://neverland.agency/assets/0082.3821e366.webp
+        https://neverland.agency/assets/0083.12ed85d0.webp
+        https://neverland.agency/assets/0084.d506f8c7.webp
+        https://neverland.agency/assets/0085.1550ca9a.webp`;
+        return data.split("\n")[index];
+    }
+
+    const frameCount = 85;
+
+    const images = [];
+    const imageSeq = {
+        frame: 0
+    };
+
+    for (let i = 0; i < frameCount; i++) {
+        const img = new Image();
+        img.src = files(i);
+        images.push(img);
+    }
+
+    gsap.to(imageSeq, {
+        frame: frameCount - 1,
+        snap: "frame",
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#page5",
+            start: "bottom bottom",
+            // scroller:"#main",
+            scrub: 0.5
+        },
+        onUpdate: render
+    });
+
+    images[0].onload = render;
+
+    function render() {
+        scaleImage(images[imageSeq.frame], context)
+    }
+
+    function scaleImage(img, ctx) {
+        var canvas = ctx.canvas;
+        var hRatio = canvas.width / img.width;
+        var vRatio = canvas.height / img.height;
+        var ratio = Math.max(hRatio, vRatio);
+        var centerShift_x = (canvas.width - img.width * ratio) / 2;
+        var centerShift_y = (canvas.height - img.height * ratio) / 2;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, img.width, img.height,
+            centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
+    }
+
+
+    gsap.to("#page5 canvas", {
+        scrollTrigger: {
+            // scroller:"#main",
+            trigger: "#page5",
+            start: "bottom 20%",
+            scrub: 0.8,
+            // markers:true,
+            // pin:true
+        },
+        scale: 1.4
+    })
+    
+    ScrollTrigger.create({
+        // scroller:"#main",
+        pin: true,
+        trigger: "#page5",
+        start: "bottom bottom",
+        end:"bootom -100%",
+        // markers:true
+    })
+
+
+}
+page5PhotoFrame();
